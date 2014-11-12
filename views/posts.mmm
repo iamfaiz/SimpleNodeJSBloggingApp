@@ -1,0 +1,26 @@
+{{> partials/header }}
+
+	<div class="row">
+		
+		{{# posts }}
+
+			<div class="col-md-6">
+				<h2><a href="/post/{{ _id }}">{{ title }}</a></h2>
+				<p>{{ content }}</p>
+				<p>
+					<form action="/post/{{ _id }}">
+						<button class="btn btn-primary">Read more &gt;&gt;</button>
+					</form>
+				</p>
+			</div>
+
+		{{/ posts }}
+
+	<div class="row">
+		<div class="col-md-12">
+			<nav>
+				{{{ pagination }}}
+			</nav>
+		</div>
+	</div>
+{{> partials/footer }}
